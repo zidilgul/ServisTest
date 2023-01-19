@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServisModelStoreContainer" CdmEntityContainer="ServisEntities">
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="ServisModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servisler">
+      <EntityTypeMapping TypeName="ServisModel.Servisler">
+        <MappingFragment StoreEntitySet="Servisler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ServisAdi" ColumnName="ServisAdi" />
+          <ScalarProperty Name="EskiServisAdi" ColumnName="EskiServisAdi" />
+          <ScalarProperty Name="EskiServisURL" ColumnName="EskiServisURL" />
+          <ScalarProperty Name="YeniServisURL" ColumnName="YeniServisURL" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="ServisTipId" ColumnName="ServisTipId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServisTip">
+      <EntityTypeMapping TypeName="ServisModel.ServisTip">
+        <MappingFragment StoreEntitySet="ServisTip">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

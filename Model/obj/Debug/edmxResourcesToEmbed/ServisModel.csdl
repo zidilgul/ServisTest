@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Servisler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="ServisAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EskiServisAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EskiServisURL" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="YeniServisURL" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ServerIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ServisTipId" Type="Int32" />
+    <NavigationProperty Name="ServisTip" Relationship="Self.FK_Servisler_ServisTip" FromRole="Servisler" ToRole="ServisTip" />
+  </EntityType>
+  <EntityType Name="ServisTip">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Servisler" Relationship="Self.FK_Servisler_ServisTip" FromRole="ServisTip" ToRole="Servisler" />
+  </EntityType>
+  <Association Name="FK_Servisler_ServisTip">
+    <End Role="ServisTip" Type="Self.ServisTip" Multiplicity="0..1" />
+    <End Role="Servisler" Type="Self.Servisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServisTip">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Servisler">
+        <PropertyRef Name="ServisTipId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ServisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kullanici" EntityType="Self.Kullanici" />
+    <EntitySet Name="Servisler" EntityType="Self.Servisler" />
+    <EntitySet Name="ServisTip" EntityType="Self.ServisTip" />
+    <AssociationSet Name="FK_Servisler_ServisTip" Association="Self.FK_Servisler_ServisTip">
+      <End Role="ServisTip" EntitySet="ServisTip" />
+      <End Role="Servisler" EntitySet="Servisler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
