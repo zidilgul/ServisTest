@@ -10,3 +10,15 @@ C:\Users\zeynep.gul4\source\repos\ServisTest\Model\obj\Debug\Model.csproj.CoreCo
 C:\Users\zeynep.gul4\source\repos\ServisTest\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\zeynep.gul4\source\repos\ServisTest\Model\obj\Debug\Model.dll
 C:\Users\zeynep.gul4\source\repos\ServisTest\Model\obj\Debug\Model.pdb
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\Model.dll.config
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\Model.dll
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\Model.pdb
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\EntityFramework.dll
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\EntityFramework.xml
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\obj\Debug\Model.dll
+C:\Users\zeynep.gul4\Documents\GitHub\ServisTest\Model\obj\Debug\Model.pdb

@@ -11,11 +11,20 @@ namespace Model
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.Xml.Linq;
+
     public partial class Kullanici
     {
         public System.Guid ID { get; set; }
+
+        [Required(ErrorMessage = "Bu alan gerekli!")]
+        [Display(Name = "Kullanýcý Adý")]
         public string KullaniciAdi { get; set; }
+
+        [Required(ErrorMessage = "Bu alan gerekli!")]
+        [Display(Name = "Þifre")]
         public string Sifre { get; set; }
     }
 }
